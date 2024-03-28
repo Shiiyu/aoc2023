@@ -1,2 +1,7 @@
-# aoc2023
-My solutions for Advent of Code 2023
+# Advent of Code 2023
+
+These are my solutions for AoC 2023.
+
+## AoC Puzzles
+
+https://adventofcode.com/2023
