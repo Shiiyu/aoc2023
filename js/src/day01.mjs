@@ -1,7 +1,7 @@
 import {readFileSync} from "fs";
 
-const data = readFileSync("../../inputs/day01.txt", "utf8");
-const numPairs = {
+const INPUT = readFileSync("../../inputs/day01.txt", "utf8");
+const NUMPAIRS = {
   "one": "o1e",
   "two": "t2o",
   "three": "t3e",
@@ -14,15 +14,15 @@ const numPairs = {
 };
 
 function parseNums(line) {
-  Object.keys(numPairs).forEach(key => {
-    line = line.replaceAll(key, numPairs[key]);
+  Object.keys(NUMPAIRS).forEach(key => {
+    line = line.replaceAll(key, NUMPAIRS[key]);
   });
 
   return line;
 }
 
 export function solve_a() {
-  return data.split("\n").reduce((s, line) => {
+  return INPUT.split("\n").reduce((s, line) => {
     let numStr = "";
 
     for(let i = 0; i < line.length; i++) {
@@ -49,7 +49,7 @@ export function solve_a() {
   }, 0);
 }
 export function solve_b() {
-  return data.split("\n").map(line => parseNums(line)).reduce((s, line) => {
+  return INPUT.split("\n").map(line => parseNums(line)).reduce((s, line) => {
     let numStr = "";
 
     for(let i = 0; i < line.length; i++) {

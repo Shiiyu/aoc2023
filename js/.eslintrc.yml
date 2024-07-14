@@ -43,7 +43,7 @@ rules: {
       while: {after: false}
     }
   }],
-  max-len: ["error", 120],
+  max-len: ["error", 100],
   new-parens: "error",
   no-constant-condition: ["error", {checkLoops: false}],
   no-empty: ["error", {allowEmptyCatch: true}],

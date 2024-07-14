@@ -1,9 +1,9 @@
 import {readFileSync} from "fs";
 
-const data = readFileSync("../../inputs/day02.txt", "utf8");
+const INPUT = readFileSync("../../inputs/day02.txt", "utf8");
 
 export function solve_a() {
-  return data.split("\n").reduce((s, l) => {
+  return INPUT.split("\n").reduce((s, l) => {
     const line = l.split(": ");
     const game = Number(line[0].substring(5));
     const cubes = line[1].split(/[;,]/);
@@ -24,7 +24,7 @@ export function solve_a() {
   }, 0);
 }
 export function solve_b() {
-  return data.split("\n").reduce((s, l) => {
+  return INPUT.split("\n").reduce((s, l) => {
     const line = l.split(": ");
     const cubes = line[1].split(/[;,]/);
     const powers = {"red": 1, "green": 1, "blue": 1};
